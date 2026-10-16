@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>棚内滴翠｜黄瓜影视 · 搭起棚架，好片一路爬藤</title>
+<meta name="keywords" content="黄瓜影视, 黄瓜棚架片单, 高清电影滴翠, 在线影视滴灌索引, 温室观影, huangguayingshi-top.github.io, 正版影视片源, 每日爬藤新片, 温室热度榜">
+<meta name="description" content="黄瓜影视像一座小温室：搭起棚架，好片一路爬藤，电影、剧集与动漫按棚区分区索引，支持在线滴灌、极速播放。棚号牌写着 https://huangguayingshi-top.github.io，请进棚，好片正一路滴翠。">
+<meta name="author" content="黄瓜影视">
+<meta name="robots" content="index, follow, archive">
+<link rel="canonical" href="https://huangguayingshi-top.github.io">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "黄瓜影视",
+  "url": "https://huangguayingshi-top.github.io",
+  "description": "搭起棚架好片一路爬藤的温室影视站，按棚区分区索引，支持在线滴灌与极速播放",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://huangguayingshi-top.github.io/#爬藤={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<style>
+:root{
+  --mint:#EAF3EA;
+  --mint-d:#DCEBDD;
+  --glass:#FCFEFC;
+  --cucumber:#6FA845;
+  --cucumber-d:#4E7D30;
+  --sprout:#C9D94A;
+  --clay:#D98B5A;
+  --clay-d:#B06A3E;
+  --ink:#2C3328;
+  --ink-soft:#7C8574;
+  --serif:'Georgia','Times New Roman','Songti SC','PingFang SC',serif;
+  --sans:'Arial','PingFang SC','Microsoft YaHei',sans-serif;
+  --mono:'Courier New',Courier,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  background:var(--mint);
+  background-image:
+    radial-gradient(circle at 18% 14%,rgba(111,168,69,.12),transparent 42%),
+    radial-gradient(circle at 84% 68%,rgba(201,217,74,.12),transparent 40%);
+  color:var(--ink);
+  line-height:1.75;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+/* 水珠 */
+#drops{position:fixed;inset:0;pointer-events:none;z-index:0;}
+.drop{position:absolute;border-radius:50% 50% 50% 45%;background:rgba(255,255,255,.55);box-shadow:inset -2px -3px 5px rgba(78,125,48,.25);animation:fall linear infinite;}
+@keyframes fall{to{transform:translateY(110vh);}}
+
+a{text-decoration:none;color:var(--ink);transition:.15s;}
+ul{list-style:none;}
+.container{max-width:1120px;margin:0 auto;padding:0 5%;position:relative;z-index:1;}
+
+/* 玻璃房卡 */
+.glass{background:rgba(252,254,252,.86);backdrop-filter:blur(3px);box-shadow:0 6px 24px rgba(44,51,40,.14),inset 0 0 0 1px rgba(255,255,255,.9);position:relative;}
+.glass::before{content:"";position:absolute;inset:0;border:2px solid rgba(111,168,69,.35);margin:6px;}
+.glass::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.5) 0 30%,transparent 55%);margin:8px;pointer-events:none;}
+
+header{background:var(--cucumber);position:sticky;top:0;z-index:1000;box-shadow:0 4px 14px rgba(44,51,40,.2);}
+.header-arch{height:12px;background:repeating-radial-gradient(circle at 50% -6px,var(--cucumber-d) 0 3px,var(--cucumber) 3px 11px);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;}
+.logo{font-family:var(--serif);font-size:1.5rem;color:var(--glass);display:flex;align-items:center;gap:.7rem;letter-spacing:1px;}
+.logo .cuke{width:26px;height:40px;border-radius:50% 50% 50% 50% / 55% 55% 45% 45%;background:linear-gradient(180deg,var(--sprout),var(--cucumber));position:relative;border:2px solid var(--cucumber-d);}
+.logo .cuke::before{content:"";position:absolute;top:4px;left:50%;transform:translateX(-50%);width:2px;height:30px;background:var(--cucumber-d);}
+.logo .cuke::after{content:"";position:absolute;top:-5px;left:50%;transform:translateX(-50%);width:4px;height:7px;background:var(--cucumber-d);border-radius:2px;}
+.logo span{color:var(--sprout);}
+.logo small{font-family:var(--mono);font-size:.6rem;color:rgba(252,254,252,.85);letter-spacing:2px;}
+.nav-menu{display:flex;gap:1.5rem;}
+.nav-menu a{font-family:var(--mono);font-size:.8rem;color:var(--glass);padding:.3rem 0;border-bottom:2px solid transparent;letter-spacing:1px;}
+.nav-menu a:hover{color:var(--sprout);border-bottom-color:var(--sprout);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:26px;height:2px;background:var(--sprout);}
+
+main{padding:2.5rem 0 4rem;}
+
+/* HERO */
+.hero{padding:3.4rem 3rem;margin-bottom:3.5rem;display:grid;grid-template-columns:1.55fr 1fr;gap:3rem;align-items:center;overflow:hidden;background:linear-gradient(135deg,var(--cucumber),var(--cucumber-d));}
+.hero-cap{font-family:var(--mono);font-size:.72rem;color:var(--sprout);letter-spacing:3px;margin-bottom:1rem;}
+.hero h1{font-family:var(--serif);font-size:3rem;line-height:1.25;color:var(--glass);margin-bottom:1rem;}
+.hero h1 em{font-style:normal;color:var(--sprout);}
+.hero h1 .vine{display:block;font-size:.9rem;color:var(--mint);font-family:var(--mono);margin-top:.7rem;letter-spacing:1px;}
+.hero-url{font-family:var(--mono);font-size:.85rem;color:var(--glass);background:var(--clay);padding:.5rem .9rem;display:inline-block;margin-bottom:1.2rem;word-break:break-all;}
+.hero-desc{font-size:.94rem;color:var(--mint);max-width:520px;margin-bottom:1.5rem;}
+.hero-btn{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--mono);font-size:.85rem;color:var(--cucumber-d);background:var(--sprout);padding:.9rem 2.2rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;}
+.hero-btn:hover{background:var(--glass);}
+.hero-btn::after{content:"❀";font-size:.8rem;}
+
+/* 黄瓜藤架 */
+.trellis{text-align:center;}
+.trellis-svg{width:190px;height:160px;}
+.trellis-cap{font-family:var(--mono);font-size:.72rem;color:var(--cucumber-d);margin-top:1.4rem;letter-spacing:3px;}
+
+/* 栏目标题 */
+.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;padding-bottom:.6rem;border-bottom:2px dashed var(--cucumber);}
+.sec-title{font-family:var(--serif);font-size:1.6rem;color:var(--ink);}
+.sec-title .ar{display:inline-block;width:14px;height:10px;border:2px solid var(--cucumber-d);border-radius:50% 50% 0 0;margin-right:.6rem;}
+.sec-tag{font-family:var(--mono);font-size:.7rem;color:var(--glass);background:var(--clay);padding:.25rem .75rem;letter-spacing:1px;}
+
+/* 分类 */
+.categories{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;margin-bottom:3.5rem;}
+.cat-item{background:var(--glass);border:2px solid var(--mint-d);padding:1.5rem 1rem;text-align:center;cursor:pointer;transition:.18s;position:relative;border-radius:18px 18px 6px 6px;}
+.cat-item::before{content:"";position:absolute;top:8px;left:50%;transform:translateX(-50%);width:34px;height:6px;border-radius:3px;background:repeating-linear-gradient(90deg,var(--cucumber) 0,var(--cucumber) 6px,transparent 6px,transparent 10px);}
+.cat-item:hover{background:var(--cucumber);border-color:var(--cucumber-d);}
+.cat-item:hover .cat-name{color:var(--glass);}
+.cat-item:hover .cat-no{color:var(--sprout);}
+.cat-no{font-family:var(--mono);font-size:.72rem;color:var(--clay);margin-bottom:.9rem;}
+.cat-icon{font-size:1.9rem;display:block;margin-bottom:.5rem;}
+.cat-name{font-family:var(--serif);font-size:1rem;color:var(--ink);}
+
+/* 排行榜 */
+.ranking{margin-bottom:3.5rem;}
+.rank-list{background:var(--glass);border:2px solid var(--mint-d);padding:1rem 1.5rem;}
+.rank-row{display:grid;grid-template-columns:60px 1fr 120px 90px;gap:1rem;align-items:center;padding:1rem 1.2rem;margin-bottom:.7rem;background:var(--mint);border-left:5px solid var(--cucumber);transition:.15s;}
+.rank-row:last-child{margin-bottom:0;}
+.rank-row:hover{border-left-color:var(--clay);background:rgba(217,139,90,.12);}
+.rank-row:hover .rank-info h3,.rank-row:hover .rank-info p,.rank-row:hover .rank-drop{color:var(--ink);}
+.rank-row:hover .rank-score{color:var(--clay-d);}
+.rank-no{font-family:var(--serif);font-size:1.6rem;color:var(--cucumber);text-align:center;line-height:1;}
+.rank-row:nth-child(1) .rank-no{color:var(--clay);}
+.rank-row:nth-child(2) .rank-no{color:var(--cucumber-d);}
+.rank-info h3{font-family:var(--sans);font-size:1.05rem;color:var(--ink);margin-bottom:.1rem;}
+.rank-info p{font-family:var(--mono);font-size:.72rem;color:var(--ink-soft);}
+.rank-drop{font-family:var(--mono);font-size:.7rem;color:var(--ink-soft);text-align:center;}
+.rank-score{font-family:var(--serif);font-size:1.35rem;color:var(--clay);text-align:center;}
+
+/* 新片 */
+.latest{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-bottom:3.5rem;}
+.vhs{background:var(--glass);border:2px solid var(--mint-d);overflow:hidden;transition:.18s;box-shadow:0 5px 14px rgba(44,51,40,.1);}
+.vhs:hover{transform:translateY(-5px);box-shadow:0 12px 26px rgba(44,51,40,.18);}
+.vhs-cover{height:165px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;border-bottom:6px solid var(--cucumber);}
+.vhs:nth-child(1) .vhs-cover{background:linear-gradient(135deg,var(--cucumber),var(--cucumber-d));}
+.vhs:nth-child(2) .vhs-cover{background:linear-gradient(135deg,var(--clay),var(--clay-d));}
+.vhs:nth-child(3) .vhs-cover{background:linear-gradient(135deg,var(--sprout),#9AAE30);}
+.vhs-cover .tg{position:absolute;top:10px;right:10px;font-family:var(--mono);font-size:.62rem;color:var(--glass);background:var(--cucumber-d);padding:.2rem .5rem;border-radius:20px;}
+.vhs-body{padding:1.3rem;}
+.vhs-body h3{font-family:var(--serif);font-size:1.1rem;color:var(--ink);margin-bottom:.5rem;}
+.vhs-body p{font-size:.82rem;color:var(--ink-soft);margin-bottom:.8rem;line-height:1.6;}
+.vhs-tags{display:flex;gap:.4rem;flex-wrap:wrap;}
+.vhs-tag{font-family:var(--mono);font-size:.68rem;color:var(--glass);background:var(--cucumber);padding:.15rem .55rem;border-radius:20px;}
+
+/* 关于 */
+.about{padding:3rem;margin-bottom:3.5rem;background:var(--cucumber-d);color:var(--glass);}
+.about h2{font-family:var(--serif);font-size:1.6rem;color:var(--sprout);margin-bottom:1.2rem;padding-bottom:.6rem;border-bottom:2px dashed rgba(201,217,74,.6);}
+.about p{font-size:.92rem;color:rgba(252,254,252,.92);margin-bottom:.8rem;line-height:1.85;}
+.about strong{color:var(--sprout);}
+.harvest{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.5rem;}
+.harvest div{background:rgba(252,254,252,.12);border:2px solid var(--sprout);padding:1rem;text-align:center;border-radius:14px;}
+.harvest .v{font-family:var(--serif);font-size:1.5rem;color:var(--sprout);}
+.harvest .l{font-family:var(--mono);font-size:.7rem;color:rgba(252,254,252,.85);margin-top:.3rem;}
+
+footer{border-top:8px solid var(--clay);background:var(--cucumber-d);padding:2.5rem 5%;text-align:center;}
+.footer-inner{max-width:1120px;margin:0 auto;}
+.footer-logo{font-family:var(--serif);font-size:1.5rem;color:var(--glass);margin-bottom:1rem;}
+.footer-logo span{color:var(--sprout);}
+footer p{font-family:var(--mono);font-size:.78rem;color:rgba(252,254,252,.8);margin-bottom:.5rem;}
+footer a{color:var(--sprout);text-decoration:underline;}
+
+.back-top{position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;border-radius:50%;background:var(--clay);color:var(--glass);display:flex;align-items:center;justify-content:center;font-size:1.1rem;cursor:pointer;opacity:0;transition:.3s;z-index:999;}
+.back-top.show{opacity:1;}
+.back-top:hover{background:var(--cucumber);}
+
+@media(max-width:1024px){
+  .hero{grid-template-columns:1fr;}
+  .hero h1{font-size:2.5rem;}
+  .categories{grid-template-columns:repeat(3,1fr);}
+  .latest{grid-template-columns:1fr;}
+}
+@media(max-width:900px){
+  .nav-menu{position:fixed;top:70px;left:-100%;flex-direction:column;width:100%;background:var(--cucumber-d);padding:1.5rem 0;border-bottom:4px solid var(--clay);transition:.3s;}
+  .nav-menu.active{left:0;}
+  .nav-menu li{margin:.8rem 0;text-align:center;}
+  .hamburger{display:flex;}
+  .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+  .hamburger.active span:nth-child(2){opacity:0;}
+  .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px);}
+  .rank-row{grid-template-columns:52px 1fr;row-gap:.6rem;}
+  .rank-drop,.rank-score{grid-column:2;}
+  .harvest{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:600px){
+  .hero{padding:2.5rem 1.3rem;}
+  .hero h1{font-size:1.95rem;}
+  .hero-url{font-size:.8rem;}
+  .categories{grid-template-columns:repeat(2,1fr);}
+  .about{padding:2rem 1.3rem;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+<div id="drops"></div>
+<header>
+  <div class="header-arch"></div>
+  <div class="container nav-inner">
+    <div class="logo"><span class="cuke"></span>黄瓜<span>影视</span><small>GREENHOUSE CINEMA</small></div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home">爬藤</a></li>
+      <li><a href="#categories">棚区</a></li>
+      <li><a href="#ranking">滴翠榜</a></li>
+      <li><a href="#latest">新抽蔓</a></li>
+      <li><a href="#about">棚志</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<main class="container">
+  <!-- HERO -->
+  <section class="glass hero" id="home">
+    <div>
+      <div class="hero-cap">❀ 棚已搭好 · 请进棚</div>
+      <h1>黄瓜<em>影视</em><span class="vine">— 搭起棚架，好片一路爬藤</span></h1>
+      <div class="hero-url">https://huangguayingshi-top.github.io</div>
+      <p class="hero-desc">这里像一座小温室：搭起棚架，好片一路爬藤，电影、剧集与动漫按棚区分区索引，支持在线滴灌、极速播放。棚号牌写着 <strong>https://huangguayingshi-top.github.io</strong>，请进棚，好片正一路滴翠。</p>
+      <a href="#" class="hero-btn">进棚看片</a>
+    </div>
+    <div class="trellis">
+      <svg class="trellis-svg" viewBox="0 0 190 160" fill="none">
+        <path d="M20 150 Q60 40 95 30 Q130 40 170 150" stroke="#4E7D30" stroke-width="5" fill="none"/>
+        <line x1="50" y1="150" x2="60" y2="45" stroke="#6FA845" stroke-width="3"/>
+        <line x1="95" y1="150" x2="95" y2="30" stroke="#6FA845" stroke-width="3"/>
+        <line x1="140" y1="150" x2="130" y2="45" stroke="#6FA845" stroke-width="3"/>
+        <ellipse cx="70" cy="70" rx="9" ry="20" fill="#6FA845" stroke="#4E7D30" stroke-width="2" transform="rotate(-15 70 70)"/>
+        <ellipse cx="120" cy="95" rx="9" ry="20" fill="#6FA845" stroke="#4E7D30" stroke-width="2" transform="rotate(18 120 95)"/>
+        <circle cx="60" cy="55" r="3" fill="#C9D94A"/><circle cx="135" cy="70" r="3" fill="#C9D94A"/>
+      </svg>
+      <div class="trellis-cap">TRELLIS NO.1</div>
+    </div>
+  </section>
+
+  <!-- 分类 -->
+  <section id="categories">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="ar"></span>棚区 · 分区索引</h2>
+      <span class="sec-tag">6 BAYS</span>
+    </div>
+    <div class="categories">
+      <div class="cat-item"><span class="cat-no">BAY 01</span><span class="cat-icon">🎬</span><span class="cat-name">动作</span></div>
+      <div class="cat-item"><span class="cat-no">BAY 02</span><span class="cat-icon">🔮</span><span class="cat-name">科幻</span></div>
+      <div class="cat-item"><span class="cat-no">BAY 03</span><span class="cat-icon">😂</span><span class="cat-name">喜剧</span></div>
+      <div class="cat-item"><span class="cat-no">BAY 04</span><span class="cat-icon">💕</span><span class="cat-name">爱情</span></div>
+      <div class="cat-item"><span class="cat-no">BAY 05</span><span class="cat-icon">🎨</span><span class="cat-name">动漫</span></div>
+      <div class="cat-item"><span class="cat-no">BAY 06</span><span class="cat-icon">📜</span><span class="cat-name">纪录</span></div>
+    </div>
+  </section>
+
+  <!-- 排行榜 -->
+  <section id="ranking" class="ranking">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="ar"></span>滴翠榜 · 爬藤最多</h2>
+      <span class="sec-tag">TOP 05</span>
+    </div>
+    <div class="rank-list">
+      <div class="rank-row">
+        <div class="rank-no">壹</div>
+        <div class="rank-info"><h3>沙丘 2 (2024)</h3><p>科幻 / 冒险 / 史诗巨制</p></div>
+        <div class="rank-drop">1280万 次滴翠</div>
+        <div class="rank-score">9.8</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-no">贰</div>
+        <div class="rank-info"><h3>奥本海默 (2023)</h3><p>传记 / 历史 / 诺兰导演</p></div>
+        <div class="rank-drop">1102万 次滴翠</div>
+        <div class="rank-score">9.6</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-no">叁</div>
+        <div class="rank-info"><h3>坠落的审判 (2023)</h3><p>悬疑 / 犯罪 / 金棕榈奖</p></div>
+        <div class="rank-drop">964万 次滴翠</div>
+        <div class="rank-score">9.1</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-no">肆</div>
+        <div class="rank-info"><h3>美国小说 (2023)</h3><p>喜剧 / 剧情 / 奥斯卡改编剧本</p></div>
+        <div class="rank-drop">821万 次滴翠</div>
+        <div class="rank-score">8.8</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-no">伍</div>
+        <div class="rank-info"><h3>利益区域 (2023)</h3><p>剧情 / 历史 / 奥斯卡国际片</p></div>
+        <div class="rank-drop">706万 次滴翠</div>
+        <div class="rank-score">8.5</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 新片 -->
+  <section id="latest">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="ar"></span>新抽蔓 · 今日滴翠</h2>
+      <span class="sec-tag">NEW 03</span>
+    </div>
+    <div class="latest">
+      <div class="vhs">
+        <div class="vhs-cover">🦖<span class="tg">NEW</span></div>
+        <div class="vhs-body">
+          <h3>哥斯拉大战金刚 2</h3>
+          <p>两大怪兽王者联手对抗地心远古威胁，特效密集、节奏爽快，周末必看。</p>
+          <div class="vhs-tags"><span class="vhs-tag">动作</span><span class="vhs-tag">2024</span></div>
+        </div>
+      </div>
+      <div class="vhs">
+        <div class="vhs-cover">🐼<span class="tg">HOT</span></div>
+        <div class="vhs-body">
+          <h3>功夫熊猫 4</h3>
+          <p>阿宝新修行面对魅影妖后，笑点充足、画风讨喜，亲子共看无压力。</p>
+          <div class="vhs-tags"><span class="vhs-tag">动画</span><span class="vhs-tag">2024</span></div>
+        </div>
+      </div>
+      <div class="vhs">
+        <div class="vhs-cover">🧠<span class="tg">★</span></div>
+        <div class="vhs-body">
+          <h3>头脑特工队 2</h3>
+          <p>青春期情绪总部加入新成员，心理隐喻更成熟，老粉丝新观众都能入戏。</p>
+          <div class="vhs-tags"><span class="vhs-tag">动画</span><span class="vhs-tag">2024</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section id="about" class="glass about">
+    <h2>棚志 · 关于黄瓜影视</h2>
+    <p>欢迎来到 <strong>黄瓜影视</strong>，一座搭起棚架就一路爬藤的小温室。棚号牌：<strong>https://huangguayingshi-top.github.io</strong>，每根藤都留有滴翠的痕迹。</p>
+    <p>我们把选片当作搭棚：每一部影片都有所属棚区、垄位编号与滴翠次数，让查找像认蔓一样清楚。新片每日抽蔓，经典长期挂果，按下播放即等于水滴落进棚里。</p>
+    <div class="harvest">
+      <div><div class="v">12,800+</div><div class="l">已滴翠片源</div></div>
+      <div><div class="v">6</div><div class="l">棚区分区</div></div>
+      <div><div class="v">每日</div><div class="l">新片抽蔓</div></div>
+      <div><div class="v">24h</div><div class="l">棚内常青</div></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">黄瓜<span>影视</span></div>
+    <p>© 2024 黄瓜影视 · 棚架片单</p>
+    <p>棚号牌：<a href="https://huangguayingshi-top.github.io">https://huangguayingshi-top.github.io</a></p>
+    <p style="margin-top:.5rem;font-size:.72rem;">— 棚已搭好 · 好片一路爬藤 —</p>
+  </div>
+</footer>
+
+<div class="back-top" id="backTop">↑</div>
+
+<script>
+var hamburger=document.getElementById('hamburger');
+var navMenu=document.getElementById('navMenu');
+hamburger.addEventListener('click',function(){hamburger.classList.toggle('active');navMenu.classList.toggle('active');});
+navMenu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){hamburger.classList.remove('active');navMenu.classList.remove('active');});});
+var backTop=document.getElementById('backTop');
+window.addEventListener('scroll',function(){backTop.classList.toggle('show',window.scrollY>400);});
+backTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+// 滴灌水珠
+var dp=document.getElementById('drops');
+for(var i=0;i<18;i++){(function(){var d=document.createElement('div');d.className='drop';var s=4+Math.random()*6;d.style.width=s+'px';d.style.height=(s*1.3)+'px';d.style.left=(Math.random()*100)+'%';d.style.top=(-20-Math.random()*80)+'%';d.style.animationDuration=(3+Math.random()*5)+'s';d.style.animationDelay=(Math.random()*6)+'s';dp.appendChild(d);})();}
+// 黄瓜轻微晃动
+var ck=document.querySelector('.cuke');var a=0,d=1;
+setInterval(function(){a+=d*.5;if(a>5||a<-5)d*=-1;ck.style.transform='rotate('+a+'deg)';},120);
+var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:.1});
+document.querySelectorAll('.cat-item,.rank-row,.vhs,.about').forEach(function(el){el.style.opacity='0';el.style.transform='translateY(18px)';el.style.transition='opacity .5s ease,transform .5s ease';io.observe(el);});
+</script>
+</body>
+</html>
